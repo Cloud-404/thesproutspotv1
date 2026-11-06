@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
+@theme {
+  --color-sprout-olive: #34451F;
+  --color-sprout-forest: #263719;
+  --color-sprout-cream: #F8EBD2;
+  --color-sprout-sage: #DCE8C9;
+  --color-sprout-brown: #6C472B;
+  --color-sprout-dark: #26291F;
+  --color-sprout-muted: #74776D;
+  --color-sprout-light: #FBF8F0;
+  --color-sprout-accent: #E27B38;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FBF8F0;
+  --foreground: #26291F;
+  --sprout-olive: #34451F;
+  --sprout-forest: #263719;
+  --sprout-cream: #F8EBD2;
+  --sprout-sage: #DCE8C9;
+  --sprout-brown: #6C472B;
+  --sprout-dark: #26291F;
+  --sprout-muted: #74776D;
+  --sprout-light: #FBF8F0;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8EBD2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #34451F;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #263719;
+}
+
+/* Card hover soft lift */
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -6px rgba(52, 69, 31, 0.12);
+}
+
+/* Veg Mark: Standard Green Dot in Square */
+.veg-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #2e7d32;
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 1px;
+}
+
+.veg-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #2e7d32;
+}
+
+/* Pulse animation for live orders */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
 }
