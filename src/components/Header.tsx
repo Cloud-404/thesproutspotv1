@@ -20,6 +20,7 @@ import {
   ShieldCheck,
   Bike,
 } from "lucide-react";
+import { BUSINESS_INFO } from "@/lib/business-info";
 
 function HeaderInner() {
   const pathname = usePathname();
@@ -27,18 +28,11 @@ function HeaderInner() {
   const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [locationModalOpen, setLocationModalOpen] = useState(false);
-  const [selectedArea, setSelectedArea] = useState("Old Palasia, Indore");
+  const [selectedArea, setSelectedArea] = useState(`${BUSINESS_INFO.serviceableLocalities[0]}, ${BUSINESS_INFO.city}`);
 
-  const localities = [
-    "Old Palasia, Indore",
-    "New Palasia, Indore",
-    "Vijay Nagar, Indore",
-    "Saket Nagar, Indore",
-    "Geeta Bhawan, Indore",
-    "Bhawarkua, Indore",
-    "LIG Colony, Indore",
-    "Anand Bazaar, Indore",
-  ];
+  const localities = BUSINESS_INFO.serviceableLocalities.map(
+    (loc) => `${loc}, ${BUSINESS_INFO.city}`
+  );
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -280,7 +274,7 @@ function HeaderInner() {
             </div>
 
             <p className="text-xs text-[#74776D] mt-3">
-              The Sprouts Spot delivers hot, freshly prepared meals across the following local Indore localities:
+              The Sprouts Spot delivers hot, freshly prepared meals across the following local {BUSINESS_INFO.city} localities:
             </p>
 
             <div className="mt-4 space-y-2 max-h-60 overflow-y-auto pr-1">

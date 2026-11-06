@@ -5,6 +5,7 @@ import Link from "next/link";
 import { VegBadge } from "./VegBadge";
 import { Logo } from "./Logo";
 import { Phone, MessageCircle, MapPin, Clock, ShieldCheck, Heart } from "lucide-react";
+import { BUSINESS_INFO } from "@/lib/business-info";
 
 export function Footer() {
   return (
@@ -21,7 +22,7 @@ export function Footer() {
             />
 
             <p className="text-xs text-[#F8EBD2]/80 leading-relaxed">
-              We are a dedicated home-kitchen in Indore preparing hygienic, fresh, and wholesome vegetarian food. From live sprouted salads to grilled paneer sandwiches and balanced thalis, every meal is prepared with love and organic care.
+              We are a dedicated home-kitchen in {BUSINESS_INFO.city}, {BUSINESS_INFO.state} preparing hygienic, fresh, and wholesome vegetarian food. From live sprouted salads to grilled paneer sandwiches and balanced thalis, every meal is prepared with love and organic care.
             </p>
 
             <div className="flex items-center gap-2 pt-1">
@@ -109,7 +110,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#DCE8C9] shrink-0 mt-0.5" />
                 <span>
-                  Flat 12, Tulsi Villa, 9 Old Palasia Main Road, Indore (M.P.) - 452001
+                  {BUSINESS_INFO.kitchenAddress}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
@@ -118,11 +119,20 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#DCE8C9] shrink-0" />
-                <span>+91 98765 43210</span>
+                <a href={`tel:${BUSINESS_INFO.cookPhone}`} className="hover:text-white transition-colors">
+                  {BUSINESS_INFO.cookPhone} (Kitchen & Orders)
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#DCE8C9] shrink-0" />
-                <span>WhatsApp: +91 98765 43210</span>
+                <a
+                  href={`https://wa.me/${BUSINESS_INFO.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  WhatsApp: {BUSINESS_INFO.cookPhone}
+                </a>
               </div>
             </div>
           </div>
@@ -130,9 +140,9 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F8EBD2]/60 gap-4">
-          <p>© 2026 The Sprouts Spot. All rights reserved.</p>
+          <p>© 2026 {BUSINESS_INFO.name}. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
-            Prepared with fresh local produce & love in Indore <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400" />
+            Prepared with fresh local produce & love in {BUSINESS_INFO.city}, {BUSINESS_INFO.state} <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400" />
           </p>
         </div>
       </div>

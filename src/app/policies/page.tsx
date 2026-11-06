@@ -13,7 +13,7 @@ export default function PoliciesPage() {
   const faqs = [
     {
       q: "Where is The Sprouts Spot located?",
-      a: "Our kitchen is located at Old Palasia, Indore (M.P.). We operate as a dedicated cloud/home kitchen preparing fresh orders for local doorstep delivery.",
+      a: "Our kitchen is located at Maheshwari Mohalla, Near Lakhara Gali, Nimbahera, Rajasthan. We operate as a dedicated cloud/home kitchen preparing fresh orders for local doorstep delivery.",
     },
     {
       q: "How are the sprouts prepared?",
@@ -21,7 +21,7 @@ export default function PoliciesPage() {
     },
     {
       q: "Can I customize the spice level or ask for Jain food?",
-      a: "Yes! During checkout, please enter your preference in the 'Special Delivery Instructions' field (e.g. 'No onion/garlic' or 'Less spicy'). You can also message Chef Radha on WhatsApp immediately after placing your order.",
+      a: "Yes! During checkout, please enter your preference in the 'Special Delivery Instructions' field (e.g. 'No onion/garlic' or 'Less spicy'). You can also message our kitchen on WhatsApp immediately after placing your order.",
     },
     {
       q: "What payment methods are supported?",
@@ -29,7 +29,7 @@ export default function PoliciesPage() {
     },
     {
       q: "How long does delivery take?",
-      a: "Average preparation time is 15-20 minutes, followed by 15-20 minutes of local transit. Most orders arrive within 30-40 minutes across our Indore delivery zones.",
+      a: "Average preparation time is 15-20 minutes, followed by 15-20 minutes of local transit. Most orders arrive within 30-40 minutes across our Nimbahera delivery zones.",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function PoliciesPage() {
           </div>
           <div className="space-y-3 text-xs text-[#74776D] leading-relaxed">
             <p>
-              The Sprouts Spot provides direct food delivery within the local city limits of <strong>Indore, Madhya Pradesh</strong>. Our primary coverage includes Old Palasia, New Palasia, Vijay Nagar, Saket Nagar, Geeta Bhawan, Bhawarkua, LIG Colony, Anand Bazaar, Scheme 54, and Manoramaganj.
+              The Sprouts Spot provides direct food delivery within the local limits of <strong>Nimbahera, Rajasthan</strong>. Our coverage includes Maheshwari Mohalla, Near Lakhara Gali, Station Road, Mandi Road, Jawahar Nagar, Adarsh Nagar, Kailash Nagar, and surrounding local localities.
             </p>
             <p>
               <strong>Delivery Fees:</strong> Orders with an item subtotal of <strong>₹299 or higher receive FREE delivery</strong>. For orders below ₹299, a nominal delivery convenience fee of ₹30 applies to cover delivery partner transit.

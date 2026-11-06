@@ -10,6 +10,7 @@ import { DemoBar } from "@/components/DemoBar";
 import { MobileBottomNav } from "@/components/MobileBottomNav";
 import { VegBadge } from "@/components/VegBadge";
 import { Logo } from "@/components/Logo";
+import { BUSINESS_INFO } from "@/lib/business-info";
 import {
   Trash2,
   Plus,
@@ -308,7 +309,7 @@ export default function CartPage() {
                   </div>
 
                   <div className="flex justify-between">
-                    <span>Delivery Fee (Local Indore)</span>
+                    <span>Delivery Fee (Local {BUSINESS_INFO.city})</span>
                     <span className="font-semibold text-[#26291F]">
                       {deliveryFee === 0 ? (
                         <span className="text-emerald-700 font-bold">FREE</span>
@@ -344,7 +345,7 @@ export default function CartPage() {
 
                 {/* Secondary Fallback: Order via WhatsApp */}
                 <a
-                  href={`https://wa.me/919876543210?text=${buildWhatsAppMessage()}`}
+                  href={`https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${buildWhatsAppMessage()}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 px-6 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold text-center flex items-center justify-center gap-2 shadow-sm transition-colors"

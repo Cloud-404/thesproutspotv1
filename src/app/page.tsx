@@ -59,8 +59,8 @@ export default function HomePage() {
       selectedCategory === "all"
         ? true
         : selectedCategory === "specials"
-        ? p.isTodaySpecial
-        : p.categoryId === selectedCategory;
+          ? p.isTodaySpecial
+          : p.categoryId === selectedCategory;
 
     const matchesSearch =
       searchQuery.trim() === "" ||
@@ -109,7 +109,7 @@ export default function HomePage() {
 
                 {/* Tagline & Supporting description */}
                 <p className="text-base sm:text-lg text-[#74776D] max-w-2xl font-medium leading-relaxed mx-auto lg:mx-0">
-                  Discover fresh, delicious vegetarian meals prepared with care in our Indore home kitchen. Wholesome sprouted grain bowls, loaded grilled sandwiches, and authentic daily thalis made fresh on order.
+                  Discover fresh, delicious vegetarian meals prepared with care in our Nimbahera home kitchen. Wholesome sprouted grain bowls, loaded grilled sandwiches, and authentic daily thalis made fresh on order.
                 </p>
 
                 {/* Operational Badges */}
@@ -334,22 +334,20 @@ export default function HomePage() {
             <div className="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar">
               <button
                 onClick={() => setSelectedCategory("all")}
-                className={`px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
-                  selectedCategory === "all"
-                    ? "bg-[#34451F] text-white shadow-md scale-105"
-                    : "bg-white text-[#26291F] border border-[#F8EBD2] hover:bg-[#F8EBD2]"
-                }`}
+                className={`px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${selectedCategory === "all"
+                  ? "bg-[#34451F] text-white shadow-md scale-105"
+                  : "bg-white text-[#26291F] border border-[#F8EBD2] hover:bg-[#F8EBD2]"
+                  }`}
               >
                 All Items ({products.length})
               </button>
 
               <button
                 onClick={() => setSelectedCategory("specials")}
-                className={`px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
-                  selectedCategory === "specials"
-                    ? "bg-[#34451F] text-white shadow-md scale-105"
-                    : "bg-[#DCE8C9] text-[#263719] hover:bg-[#34451F] hover:text-white"
-                }`}
+                className={`px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${selectedCategory === "specials"
+                  ? "bg-[#34451F] text-white shadow-md scale-105"
+                  : "bg-[#DCE8C9] text-[#263719] hover:bg-[#34451F] hover:text-white"
+                  }`}
               >
                 <span>⭐ Today&apos;s Specials</span>
               </button>
@@ -358,11 +356,10 @@ export default function HomePage() {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
-                    selectedCategory === cat.id
-                      ? "bg-[#34451F] text-white shadow-md scale-105"
-                      : "bg-white text-[#26291F] border border-[#F8EBD2] hover:bg-[#F8EBD2]"
-                  }`}
+                  className={`px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${selectedCategory === cat.id
+                    ? "bg-[#34451F] text-white shadow-md scale-105"
+                    : "bg-white text-[#26291F] border border-[#F8EBD2] hover:bg-[#F8EBD2]"
+                    }`}
                 >
                   {cat.name}
                 </button>
@@ -427,16 +424,16 @@ export default function HomePage() {
                   Have Special Dietary Preferences?
                 </h3>
                 <p className="text-xs sm:text-sm text-[#F8EBD2]/90 leading-relaxed">
-                  Chef Radha accommodates custom spice levels (mild/medium/spicy), Jain options (without onion/garlic), and oil-free sprout preparations upon request. Just mention it in your order notes or ping us on WhatsApp!
+                  Our kitchen accommodates custom spice levels (mild/medium/spicy), Jain options (without onion/garlic), and oil-free sprout preparations upon request. Just mention it in your order notes or ping us on WhatsApp!
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-4">
                   <a
-                    href="https://wa.me/919876543210?text=Hi%20The%20Sprouts%20Spot!%20I%20have%20a%20custom%20dietary%20request%20for%20today."
+                    href="https://wa.me/917878794401?text=Hi%20The%20Sprouts%20Spot!%20I%20have%20a%20custom%20dietary%20request%20for%20today."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold shadow-md transition-colors inline-flex items-center gap-2"
                   >
-                    <span>💬 WhatsApp Chef Directly</span>
+                    <span>💬 WhatsApp Kitchen Directly</span>
                   </a>
                   <a
                     href="#menu-section"

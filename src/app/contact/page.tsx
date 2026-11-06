@@ -13,7 +13,9 @@ import {
   Mail,
   Send,
   CheckCircle2,
+  User,
 } from "lucide-react";
+import { BUSINESS_INFO } from "@/lib/business-info";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -35,13 +37,13 @@ export default function ContactPage() {
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-28 md:pb-16 space-y-10">
         <div>
           <span className="text-xs font-bold text-[#6C472B] uppercase tracking-wider">
-            Indore Home Kitchen • We Love Hearing From You
+            {BUSINESS_INFO.city}, {BUSINESS_INFO.state} Home Kitchen • We Love Hearing From You
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#263719] mt-1">
-            Get in Touch with The Sprouts Spot
+            Get in Touch with {BUSINESS_INFO.name}
           </h1>
           <p className="text-xs sm:text-sm text-[#74776D] mt-1">
-            Have questions about catering, corporate meal boxes, custom diets, or order delivery?
+            Have questions about catering, corporate meal boxes, custom diets, or order delivery in {BUSINESS_INFO.city}?
           </p>
         </div>
 
@@ -61,8 +63,32 @@ export default function ContactPage() {
                   <div>
                     <span className="font-bold block">Kitchen Address</span>
                     <span className="text-[#74776D] leading-relaxed">
-                      Flat 12, Tulsi Villa, 9 Old Palasia Main Road, Indore (M.P.) - 452001
+                      {BUSINESS_INFO.kitchenAddress}
                     </span>
+                    <a
+                      href={BUSINESS_INFO.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] text-[#34451F] font-bold block mt-1 hover:underline"
+                    >
+                      View on Google Maps →
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#DCE8C9] text-[#263719] flex items-center justify-center shrink-0">
+                    <User className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-bold block">Customer Support / Doubts</span>
+                    <span className="text-[#74776D] block">{BUSINESS_INFO.supportContactName}</span>
+                    <a
+                      href={`tel:${BUSINESS_INFO.supportPhone}`}
+                      className="text-[#34451F] font-bold hover:underline"
+                    >
+                      {BUSINESS_INFO.supportPhone}
+                    </a>
                   </div>
                 </div>
 
@@ -71,12 +97,12 @@ export default function ContactPage() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-bold block">Phone Call</span>
+                    <span className="font-bold block">Cook / Kitchen Phone</span>
                     <a
-                      href="tel:+919876543210"
+                      href={`tel:${BUSINESS_INFO.cookPhone}`}
                       className="text-[#34451F] font-bold hover:underline"
                     >
-                      +91 98765 43210
+                      {BUSINESS_INFO.cookPhone}
                     </a>
                   </div>
                 </div>
@@ -86,14 +112,14 @@ export default function ContactPage() {
                     <MessageCircle className="w-4 h-4 text-emerald-700" />
                   </div>
                   <div>
-                    <span className="font-bold block">WhatsApp Business</span>
+                    <span className="font-bold block">WhatsApp Support & Orders</span>
                     <a
-                      href="https://wa.me/919876543210"
+                      href={`https://wa.me/${BUSINESS_INFO.whatsappNumber}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-emerald-700 font-bold hover:underline"
                     >
-                      +91 98765 43210 (Click to Chat)
+                      {BUSINESS_INFO.cookPhone} (Click to Chat)
                     </a>
                   </div>
                 </div>

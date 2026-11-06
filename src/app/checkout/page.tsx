@@ -7,6 +7,7 @@ import confetti from "canvas-confetti";
 import { useCart } from "@/context/CartContext";
 import { useAuth } from "@/context/AuthContext";
 import { Address, PaymentMethod } from "@/lib/types";
+import { BUSINESS_INFO } from "@/lib/business-info";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DemoBar } from "@/components/DemoBar";
@@ -38,8 +39,8 @@ export default function CheckoutPage() {
   // Address Form State
   const [houseFlat, setHouseFlat] = useState("");
   const [landmark, setLandmark] = useState("");
-  const [areaLocality, setAreaLocality] = useState("Saket Nagar");
-  const [city, setCity] = useState("Indore");
+  const [areaLocality, setAreaLocality] = useState<string>(BUSINESS_INFO.serviceableLocalities[0]);
+  const [city, setCity] = useState<string>(BUSINESS_INFO.city);
   const [instructions, setInstructions] = useState("");
 
   // Customer Contact State
@@ -86,18 +87,7 @@ export default function CheckoutPage() {
     setCity(addr.city);
   };
 
-  const localities = [
-    "Old Palasia",
-    "New Palasia",
-    "Vijay Nagar",
-    "Saket Nagar",
-    "Geeta Bhawan",
-    "Bhawarkua",
-    "LIG Colony",
-    "Anand Bazaar",
-    "Scheme 54",
-    "Manoramaganj",
-  ];
+  const localities = [...BUSINESS_INFO.serviceableLocalities, "Other Locality"];
 
   const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -279,7 +269,7 @@ export default function CheckoutPage() {
                     <span className="w-6 h-6 rounded-full bg-[#DCE8C9] text-[#263719] flex items-center justify-center text-xs font-extrabold">
                       2
                     </span>
-                    Delivery Address (Indore City)
+                    Delivery Address ({BUSINESS_INFO.city}, {BUSINESS_INFO.state})
                   </h3>
                   <span className="text-[10px] text-[#34451F] font-bold bg-[#DCE8C9]/40 px-2.5 py-0.5 rounded-full">
                     Local Kitchen Delivery

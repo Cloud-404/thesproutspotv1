@@ -16,7 +16,7 @@ interface RegisterFormData {
 interface AuthContextType {
   user: SessionData | null;
   isLoading: boolean;
-  login: (identifier: string, password: string) => Promise<{ success: boolean; error?: string }>;
+  login: (identifier: string, password: string) => Promise<{ success: boolean; user?: SessionData; error?: string }>;
   quickLogin: (role: "customer" | "admin" | "delivery") => Promise<{ success: boolean; error?: string }>;
   register: (data: RegisterFormData) => Promise<{ success: boolean; error?: string; field?: string }>;
   logout: () => Promise<void>;
@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { success: false, error: data.error || "Login failed" };
       }
       setUser(data.user);
-      return { success: true };
+      return { success: true, user: data.user };
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Network error";
       return { success: false, error: msg };
@@ -81,7 +81,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { success: false, error: data.error || "Quick login failed" };
       }
       setUser(data.user);
-      return { success: true };
+      return { success: true, user: data.user };
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Network error";
       return { success: false, error: msg };
@@ -100,7 +100,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { success: false, error: data.error || "Registration failed", field: data.field };
       }
       setUser(data.user);
-      return { success: true };
+      return { success: true, user: data.user };
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Network error";
       return { success: false, error: msg };

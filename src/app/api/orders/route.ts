@@ -293,7 +293,7 @@ export async function POST(req: Request) {
         houseFlat: deliveryAddress.houseFlat,
         landmark: deliveryAddress.landmark || "",
         areaLocality: deliveryAddress.areaLocality,
-        city: deliveryAddress.city || "Indore",
+        city: deliveryAddress.city || "Nimbahera",
         instructions: deliveryAddress.instructions || "",
       },
       items: validatedItems,

@@ -450,11 +450,11 @@ export default function DeliveryPartnerPage() {
                           The Sprouts Spot Kitchen
                         </p>
                         <p className="text-[11px] text-[#74776D]">
-                          Flat 12, Tulsi Villa, 9 Old Palasia Main Road, Indore
+                          Maheshwari Mohalla, Near Lakhara Gali, Nimbahera, Rajasthan
                         </p>
                         <div className="pt-2">
                           <a
-                            href="https://maps.google.com/?q=Old+Palasia+Indore"
+                            href="https://maps.google.com/?q=Maheshwari+Mohalla,+Near+Lakhara+Gali,+Nimbahera,+Rajasthan"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#DCE8C9] text-[#263719] text-[11px] font-bold hover:bg-[#34451F] hover:text-white transition-colors"
@@ -495,7 +495,7 @@ export default function DeliveryPartnerPage() {
                         <div className="pt-2">
                           <a
                             href={`https://maps.google.com/?q=${encodeURIComponent(
-                              `${order.deliveryAddress.houseFlat}, ${order.deliveryAddress.areaLocality}, Indore`
+                              `${order.deliveryAddress.houseFlat}, ${order.deliveryAddress.areaLocality}, ${order.deliveryAddress.city || "Nimbahera"}`
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"

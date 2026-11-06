@@ -260,7 +260,7 @@ export default function AdminSettingsPage() {
 
           <div>
             <label className="text-[11px] font-bold text-[#26291F] block mb-1">
-              Serviceable Indore Localities (comma-separated)
+              Serviceable Nimbahera Localities (comma-separated)
             </label>
             <textarea
               rows={2}

@@ -31,7 +31,14 @@ function LoginContent() {
     setLoading(false);
 
     if (res.success) {
-      router.push(redirectTarget);
+      const userRole = res.user?.role;
+      if (userRole === "delivery") {
+        router.push(redirectTarget && redirectTarget.startsWith("/delivery") ? redirectTarget : "/delivery");
+      } else if (userRole === "admin") {
+        router.push(redirectTarget && redirectTarget.startsWith("/admin") ? redirectTarget : "/admin");
+      } else {
+        router.push(redirectTarget);
+      }
     } else {
       setErrorMsg(res.error || "Invalid username or password");
     }

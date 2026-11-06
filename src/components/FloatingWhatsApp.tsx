@@ -3,10 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { Logo } from "./Logo";
+import { BUSINESS_INFO } from "@/lib/business-info";
 
 export function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
-  const [whatsappNumber, setWhatsappNumber] = useState("919876543210");
+  const [whatsappNumber, setWhatsappNumber] = useState(BUSINESS_INFO.whatsappNumber);
 
   useEffect(() => {
     fetch("/api/store/settings")

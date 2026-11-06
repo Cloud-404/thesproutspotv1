@@ -18,19 +18,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://thesproutspot.com"),
-  title: "The Sprouts Spot | Fresh Homemade Vegetarian Food & Meal Delivery",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://thesproutspotv1.vercel.app"),
+  title: "The Sprouts Spot | Fresh Homemade Vegetarian Food & Meal Delivery in Nimbahera",
   description:
-    "Eat Healthy, Live Happy. Freshly prepared, hygienic home-kitchen vegetarian sandwiches, sprouts chaat, paneer specials, and wholesome daily meals delivered straight to your doorstep in Indore.",
+    "Eat Healthy, Live Happy. Freshly prepared, hygienic home-kitchen vegetarian sandwiches, sprouts chaat, paneer specials, and wholesome daily meals delivered straight to your doorstep in Nimbahera, Rajasthan.",
   keywords: [
     "The Sprouts Spot",
     "Healthy vegetarian food delivery",
-    "Indore food delivery",
-    "Homemade meals",
+    "Nimbahera food delivery",
+    "Rajasthan home kitchen",
+    "Homemade meals Nimbahera",
     "Sprouts chaat",
-    "Paneer bhurji",
-    "Indori sandwich",
-    "Fresh food delivery",
+    "Paneer specials",
+    "Fresh food delivery Chittorgarh",
   ],
   authors: [{ name: "The Sprouts Spot Home Kitchen" }],
   manifest: "/manifest.json",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "The Sprouts Spot | Fresh Homemade Vegetarian Food & Meal Delivery",
+    title: "The Sprouts Spot | Fresh Homemade Vegetarian Food & Meal Delivery in Nimbahera",
     description:
-      "Eat Healthy, Live Happy. Freshly prepared, hygienic home-kitchen vegetarian sandwiches, sprouts chaat, paneer specials, and wholesome daily meals delivered straight to your doorstep in Indore.",
+      "Eat Healthy, Live Happy. Freshly prepared, hygienic home-kitchen vegetarian sandwiches, sprouts chaat, paneer specials, and wholesome daily meals delivered straight to your doorstep in Nimbahera, Rajasthan.",
     siteName: "The Sprouts Spot",
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "The Sprouts Spot",
     description:
-      "Eat Healthy, Live Happy. Fresh Homemade Vegetarian Food & Meal Delivery in Indore.",
+      "Eat Healthy, Live Happy. Fresh Homemade Vegetarian Food & Meal Delivery in Nimbahera, Rajasthan.",
     images: ["/images/logo.jpg"],
   },
 };

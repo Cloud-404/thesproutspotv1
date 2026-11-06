@@ -46,7 +46,7 @@ export async function POST(req: Request) {
 
   try {
     const body = await req.json();
-    const { label, houseFlat, landmark, areaLocality, city = "Indore", postalCode, instructions, isDefault } = body;
+    const { label, houseFlat, landmark, areaLocality, city = "Nimbahera", postalCode, instructions, isDefault } = body;
 
     if (!houseFlat || !areaLocality) {
       return NextResponse.json(
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
         house_flat: houseFlat,
         landmark: landmark || null,
         area_locality: areaLocality,
-        city: city || "Indore",
+        city: city || "Nimbahera",
         postal_code: postalCode || null,
         instructions: instructions || null,
         is_default: Boolean(isDefault),

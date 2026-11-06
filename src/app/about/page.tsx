@@ -21,7 +21,7 @@ export default function AboutPage() {
         <div className="text-center max-w-2xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#6C472B] uppercase tracking-wider bg-[#F8EBD2] px-3.5 py-1.5 rounded-full">
             <Sparkles className="w-3.5 h-3.5 text-[#34451F]" />
-            From Our Indore Kitchen to Your Table
+            From Our Nimbahera Kitchen to Your Table
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-[#263719] tracking-tight">
             Our Story & Food Philosophy
@@ -51,11 +51,11 @@ export default function AboutPage() {
             </div>
 
             <h2 className="text-2xl font-extrabold text-[#263719]">
-              Nourishing Indore, One Fresh Batch at a Time
+              Nourishing Nimbahera, One Fresh Batch at a Time
             </h2>
 
             <p>
-              Started as a humble kitchen in Old Palasia, Indore, The Sprouts Spot initially prepared nourishing breakfast boxes and sprout bowls for neighbors and friends over WhatsApp.
+              Started as a dedicated home kitchen in Maheshwari Mohalla, Nimbahera (Chittorgarh), The Sprouts Spot initially prepared nourishing breakfast boxes and sprout bowls for neighbors and friends.
             </p>
 
             <p>

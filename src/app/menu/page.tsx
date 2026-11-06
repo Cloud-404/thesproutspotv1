@@ -67,7 +67,7 @@ export default function MenuPage() {
         {/* Page Title & Breadcrumb */}
         <div className="mb-6">
           <span className="text-xs font-bold text-[#6C472B] uppercase tracking-wider">
-            Pure Vegetarian • Indore Home Kitchen
+            Pure Vegetarian • Nimbahera Home Kitchen
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#263719] mt-1">
             Explore Our Full Menu

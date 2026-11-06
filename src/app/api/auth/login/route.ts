@@ -113,6 +113,16 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: GENERIC_ERROR }, { status: 401 });
     }
 
+    // Authoritatively verify the email from Supabase Auth to protect against table sync discrepancies
+    try {
+      const { data: authUserObj } = await supabaseAdmin.auth.admin.getUserById(userProfile.id);
+      if (authUserObj?.user?.email) {
+        targetEmail = authUserObj.user.email;
+      }
+    } catch {
+      // Fallback to targetEmail from profiles table
+    }
+
     if (!userProfile.is_active) {
       return NextResponse.json(
         { error: "This account has been deactivated. Please contact support." },

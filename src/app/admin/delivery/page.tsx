@@ -106,7 +106,7 @@ export default function AdminDeliveryPage() {
             {inProgressDeliveries.length} Deliveries
           </span>
           <span className="text-[10px] text-[#74776D] block mt-0.5">
-            Currently in transit across Indore
+            Currently in transit across Nimbahera
           </span>
         </div>
       </div>

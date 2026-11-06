@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { Address } from "@/lib/types";
+import { BUSINESS_INFO } from "@/lib/business-info";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DemoBar } from "@/components/DemoBar";
@@ -34,8 +35,8 @@ export default function ProfilePage() {
   const [label, setLabel] = useState("Home");
   const [houseFlat, setHouseFlat] = useState("");
   const [landmark, setLandmark] = useState("");
-  const [areaLocality, setAreaLocality] = useState("Saket Nagar");
-  const [city, setCity] = useState("Indore");
+  const [areaLocality, setAreaLocality] = useState<string>(BUSINESS_INFO.serviceableLocalities[0]);
+  const [city, setCity] = useState<string>(BUSINESS_INFO.city);
   const [isDefault, setIsDefault] = useState(false);
 
   const fetchAddresses = async () => {
@@ -122,7 +123,7 @@ export default function ProfilePage() {
         <div className="mb-6">
           <h1 className="text-3xl font-extrabold text-[#263719]">Customer Account</h1>
           <p className="text-xs sm:text-sm text-[#74776D] mt-0.5">
-            Manage your personal profile and saved Indore delivery addresses.
+            Manage your personal profile and saved {BUSINESS_INFO.city} delivery addresses.
           </p>
         </div>
 
